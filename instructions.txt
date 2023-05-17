@@ -1,0 +1,32 @@
+#Setup Directory Structure : 
+npm init (by providing the basic details of the application)
+
+#Starting the Express
+const express = require('express');
+const app   =   express();
+const post  =   8000;
+
+app.listen(port, function(err){
+    if(err){
+        // console.log('err', err);
+        console.log(`Error during runnign server : ${err}`); // This is called interpolation method to use it with stabs
+    }
+
+    console.log(`Server is running on port : ${port}`);
+});
+
+#Register a script for nodemon repeated command.
+By adding into package.json in script part.
+"scripts": {
+    "start": "nodemon index.js"
+  },
+
+# Add a git remote origin
+git init
+git config --global user.email & name ""
+git config --global --add safe.directory /var/www/html/Node_Codeial
+
+#Setup the Node Routes
+//use express routes by calling into root index.js file
+app.use('/', require('./routes'));
+
