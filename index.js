@@ -4,6 +4,7 @@ const port  =   8000;
 
 //use express routes
 app.use('/', require('./routes'));
+app.use('/users', require('./routes/users'));
 
 
 
